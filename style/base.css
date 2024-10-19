@@ -1,0 +1,31 @@
+/* base.css */
+:root {
+    --orange: #ff9f1c;
+    --light-orange: #ffbf69;
+    --white: #fff;
+    --light-water-blue: #cbf3f0;
+    --water-blue: #10ddf0;
+    --black: #141414;
+    --yellow: #F3C301;
+    --light-yellow: #FEE3A2;
+    --light-blue: #bbf3f5;
+    --light-green: #87C159;
+    --green: #058240;
+    --scarlet: #FF2E00;
+    --dark-scarlet: #c1121f;
+    --black-olive: #423E3B;
+    --desert-sand: #F6D4BA;
+    --dark-cyan:#669bbc;
+    --vivid-blue: #76edf1d9
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Robotto', sans-serif;
+}

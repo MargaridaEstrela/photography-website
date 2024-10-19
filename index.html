@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+
+        <!-- Include Split CSS Files -->
+    <link rel="stylesheet" href="style/base.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/gallery.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/lastwork.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+    <link rel="stylesheet" href="style/social_icons.css" />
+    
     <script
       src="https://kit.fontawesome.com/e8e5b49fb7.js"
       crossorigin="anonymous"
@@ -13,6 +23,8 @@
       href="https://fonts.googleapis.com/css?family=Kumbh Sans"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Robotto"
+    rel="stylesheet">
   </head>
   <body>
     <!-- Navbar Section -->
@@ -28,13 +40,13 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/" class="navbar__links"> Home </a>
+            <a href="/" class="navbar__links"> home </a>
           </li>
           <li class="navbar__item">
-            <a href="portfolio.html" class="navbar__links"> Portfolio </a>
+            <a href="portfolio.html" class="navbar__links"> photographs </a>
           </li>
           <li class="navbar__item">
-            <a href="about.html" class="navbar__links"> About </a>
+            <a href="about.html" class="navbar__links"> about </a>
           </li>
         </ul>
       </div>
@@ -43,44 +55,46 @@
     <!-- Hero Section -->
     <div class="main">
       <div class="main__container">
-        <div class="main__content">
-          <p>Taking an image, freezing a moment...</p>
-          <h1>PHOTOGRAPHY</h1>
-          <h2>MARGARIDA ESTRELA</h2>
-          <button class="main__btn"><a href="/">Discover more</a></button>
+        <div class="main__grid">
+          <div class="main__image main__image--1">
+            <img src="images/castelo_ferragudo_noite.jpg" alt="Photo 1">
+          </div>
+          <div class="main__image main__image--2">
+            <img src="images/birds_loule.jpg" alt="Photo 2">
+          </div>
         </div>
-        <div class="main__img--container">
-          <img src="images/DSC_6792.jpg" alt="zoo" id="main__img" />
+        <div class="main__content">
+          <div class="main__overlay">
+            <!-- <p>Taking an image, freezing a moment...</p> -->
+            <h1>PHOTOGRAPHY</h1>
+            <h2>MARGARIDA ESTRELA</h2>
+            <!-- <button class="main__btn"><a href="/">Discover more</a></button> -->
+          </div>
         </div>
       </div>
     </div>
+
 
     <!-- Last Work Section -->
     <div class="lastwork">
       <h1>Last Work</h1>
       <div class="lastwork__container">
         <div class="lastwork__card">
-          <h2>Praia da Rocha, Portimão</h2>
-          <p>Nov 2023</p>
+          <img src="images/galinha-limaos.jpeg" alt="Birds at Loule" />
+          <h2>Limãos</h2>
+          <p>Sep 2024</p>
         </div>
         <div class="lastwork__card">
-          <h2>Jardim Zoológico, Lisbon</h2>
-          <p>Nov 2023</p>
+          <img src="images/all_porshces.jpg" alt="Porsches" />
+          <h2>Porsche Carrera Cup, Circuito Estoril</h2>
+          <p>Jun 2024</p>
         </div>
       </div>
     </div>
 
+
     <!-- Footer Section -->
     <div class="footer__container">
-      <!-- <div class="footer__links">
-        <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-            <h2>Social Media</h2>
-            <a href="/"> Instagram </a>
-            <a href="/"> Facebook </a>
-          </div>
-        </div>
-      </div> -->
       <div class="social__media">
         <div class="social__media--wrap">
           <p class="website__rights">

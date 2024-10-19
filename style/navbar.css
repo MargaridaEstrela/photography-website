@@ -1,0 +1,78 @@
+/* navbar */
+.navbar {
+    background: var(--black);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;   
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: var(--orange);
+    background-image: linear-gradient(to top, #0088ff 0%, #febdf9 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa_gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__links {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    height: 100%;
+}
+
+.navbar__item:not(:last-child)::after {
+    content: " / ";
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-left: 5px;
+    display: inline;
+}
+
+.navbar__links:hover {
+    color: var(--scarlet);
+    transition: all 0.3s ease;
+}

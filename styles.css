@@ -10,13 +10,22 @@
     --light-blue: #ADCACB;
     --light-green: #87C159;
     --green: #058240;
+    --scarlet: #FF2E00;
+    --dark-scarlet: #c1121f;
+    --black-olive: #423E3B;
+    --desert-sand: #F6D4BA;
+    --dark-cyan:#669bbc;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumb Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Robotto', sans-serif;
 }
 
 .navbar {
@@ -43,7 +52,7 @@
 }
 
 #navbar__logo {
-    background-color: var(--orange);
+    background-color: var(--white);
     background-image: linear-gradient(to top, #0088ff 0%, #febdf9 100%);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -69,8 +78,10 @@
     text-align: center;
 }
 
-.navbar_item {
+.navbar__item {
     height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar__links {
@@ -78,14 +89,23 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     height: 100%;
 }
 
+.navbar__item:not(:last-child)::after {
+    content: " / ";
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-left: 5px;
+    display: inline;
+}
+
 .navbar__links:hover {
-    color: var(--light-orange);
+    color: var(--scarlet);
     transition: all 0.3s ease;
 }
+
 
 @media screen and (max-width: 960px) {
     .navbar__container {
@@ -97,7 +117,7 @@
         max-width: 1300px;
         padding: 0;
     }
- 
+
     .navbar__menu {
         display: grid;
         grid-template-columns: auto;
@@ -109,7 +129,7 @@
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
-        background: #131313;
+        background: var(--black);
     }
 
     .navbar__menu.active {
@@ -172,7 +192,7 @@
 
 /* Hero Section CSS */
 .main {
-    background-color: #141414;   
+    background-color: var(--black);   
 }
 
 .main__container {
@@ -182,7 +202,7 @@
     justify-self: center;
     margin: 0 auto;
     height: 90vh;
-    background-color: #141414;
+    background-color: var(--black);
     z-index: 1;
     width: 100%;
     padding: 0 50px;
@@ -190,7 +210,7 @@
 
 .main__content h1 {
     font-size: 4rem;
-    background-color: var(--orange);
+    background-color: var(--dark-scarlet);
     background-size: 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -201,7 +221,7 @@
 
 .main__content h2 {
     font-size: 4rem;
-    background-color: #76edf1d9;
+    background-color: var(--dark-cyan);
     background-size: 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -220,7 +240,7 @@
 
 .main__btn {
     font-size: 1rem;
-    background-color: #a3c9caa5;
+    background-color: var(--dark-cyan);
     padding: 14px 12px;
     border: none;
     border-radius: 4px;
@@ -246,7 +266,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--orange);
+    background: var(--dark-scarlet);
     transition: all 0.35s;
     border-radius: 4px;
 }
@@ -334,12 +354,12 @@
 .lastwork h1 {
     font-size: 2.5rem;
     margin: 2rem;
-    color: #ffffff; /* Set the color of the text */
+    color: var(--white);
     display: inline-block;
-    padding: 0.5rem 1rem; /* Adjust padding to create space around the background rectangle */
+    padding: 0.5rem 1rem;
     background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #76edf1d9, #76edf1d9); /* Background gradient for the rectangle */
-    background-size: auto auto, calc(100% + 1rem) 100%; /* Set background sizes, adding extra width for margin */
-    background-clip: text, border-box; /* Clip the background to the text and the border box */
+    background-size: auto auto, calc(100% + 1rem) 100%;
+    background-clip: text, border-box;
     -webkit-background-clip: text, border-box;
     -moz-background-clip: text, border-box;
 }
@@ -355,7 +375,7 @@
     height: 525px;
     width: 600px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(17, 17, 17, 0.6) 100%), url('images/DSCF2564.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(17, 17, 17, 0.6) 100%), url('images/birds_loule.jpg');
     background-size: cover;
     position: relative;
     color: #fff;
@@ -366,7 +386,7 @@
     height: 525px;
     width: 600px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(17, 17, 17, 0.6) 100%), url('/images/DSC_6499.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(17, 17, 17, 0.6) 100%), url('/images/leopardo_zoo.jpg');
     background-size: cover;
     color: #fff;
 }
@@ -395,8 +415,8 @@
     }
 
     .lastwork h1 {
-       font-size: 2rem;
-       margin-top: 12rem; 
+        font-size: 2rem;
+        margin-top: 12rem; 
     }
 }
 
@@ -406,13 +426,109 @@
     }
 
     .lastwork h1 {
-       font-size: 1.2rem;
+        font-size: 1.2rem;
     }
 
     .lastwork__card {
         width: 300px;
     }
 }
+
+/* Gallery Section with Two Columns */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    grid-gap: 20px; /* Space between images */
+    padding: 20px;
+    background-color: var(--black); /* Background color for contrast */
+}
+
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect (optional) */
+}
+
+/* Full-image overlay and text container */
+.gallery__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire image */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background over the whole image */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align the text at the bottom */
+    text-align: center;
+    padding: 30px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out */
+}
+
+/* Sub-label (description) styling */
+.gallery__sublabel {
+    font-size: 1rem; /* Slightly smaller text for the sub-label */
+    color: #ddd; /* A lighter color to differentiate the sub-label */
+}
+
+/* Show label on hover */
+.gallery__item:hover .gallery__label {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.gallery__item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover, optional */
+}
+
+
+
+.about__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 20px;
+    background-color: var(--light-water-blue);
+}
+
+.about__image img {
+width: 100%;
+max-width: 400px;
+border-radius: 8px;
+margin-right: 40px;
+}
+
+.about__content {
+flex: 1;
+font-family: 'Lora', serif;
+}
+
+.about__content h1, h2 {
+color: var(--black);
+}
+
+.about__content p {
+font-size: 1.2rem;
+line-height: 1.8;
+color: var(--black);
+}
+
+.about__content a {
+color: var(--water-blue);
+text-decoration: none;
+}
+
+.about__content a:hover {
+text-decoration: underline;
+}
+
 
 /* Footer CSS */
 .footer__container {
