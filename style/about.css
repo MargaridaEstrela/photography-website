@@ -1,11 +1,15 @@
 /* About Me Section */
 
-body, .navbar, .footer__container {
-    background-color: var(--black); /* Black background for entire page */
-    color: #fff; /* White text for contrast */
-    margin: 0;
-    padding: 0;
-    width: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Reset default margins */
+}
+
+/* Main content area should grow to fill the available space */
+.main-content {
+  flex: 1;
 }
 
 .about {
