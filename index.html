@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="style/navbar.css" />
     <link rel="stylesheet" href="style/responsive.css" />
     <link rel="stylesheet" href="style/social_icons.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script
       src="https://kit.fontawesome.com/e8e5b49fb7.js"
@@ -23,8 +29,8 @@
       href="https://fonts.googleapis.com/css?family=Kumbh Sans"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css?family=Robotto"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navbar Section -->
@@ -43,7 +49,7 @@
             <a href="/" class="navbar__links"> home </a>
           </li>
           <li class="navbar__item">
-            <a href="photographs.html" class="navbar__links"> photographs </a>
+            <a href="portfolio.html" class="navbar__links"> portfolio </a>
           </li>
           <li class="navbar__item">
             <a href="about.html" class="navbar__links"> about </a>
@@ -55,21 +61,31 @@
     <!-- Hero Section -->
     <div class="main">
       <div class="main__container">
-        <div class="main__grid">
-          <div class="main__image main__image--1">
-            <img src="images/castelo_ferragudo_noite.jpg" alt="Photo 1">
+        <div class="main__overlay"></div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/castelo_ferragudo_noite.jpg" alt="Photo 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/birds_home_page.jpg" alt="Photo 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/all_porshces.jpg" alt="Photo 3">
+            </div>
           </div>
-          <div class="main__image main__image--2">
-            <img src="images/birds_loule.jpg" alt="Photo 2">
-          </div>
+          <!-- Navigation Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+
+        <!-- Text Content -->
         <div class="main__content">
-          <div class="main__overlay">
-            <!-- <p>Taking an image, freezing a moment...</p> -->
-            <h1>PHOTOGRAPHY</h1>
-            <h2>MARGARIDA ESTRELA</h2>
-            <!-- <button class="main__btn"><a href="/">Discover more</a></button> -->
-          </div>
+          <h1>MARGARIDA ESTRELA</h1>
+          <h2>photography</h2>
         </div>
       </div>
     </div>
@@ -98,7 +114,7 @@
       <div class="social__media">
         <div class="social__media--wrap">
           <p class="website__rights">
-            @Margarida Estrela Photography 2024. All rights reserved
+            @Margarida Estrela Photography 2025. All rights reserved
           </p>
           <div class="social__icons">
             <a href="/" class="social__icon--link" target="_blank"

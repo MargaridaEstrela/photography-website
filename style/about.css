@@ -13,67 +13,97 @@ body {
 }
 
 .about {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; 
-    background-color: var(--black); /* Black background */
-    color: #fff; /* White text for contrast */
-    padding: 5rem;
-    gap: 10rem; /* Space between image and content */
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Distributes space */
+  background-color: var(--black);
+  color: #fff;
+  padding: 5rem 10%; /* Adjusted padding */
+  gap: 4rem; /* Reduces space between text & image */
 }
 
 .about__image {
-    flex: 1;
-    max-width: 30%; /* Adjust image width */
-    align-self: center;
+  flex: 1;
+  max-width: 40%; /* Increase image size */
+  align-self: center;
 }
 
 .about__image img {
-    width: 100%; 
-    height: auto;
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for a modern feel */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.about__image img:hover {
+  transform: scale(1.02); /* Subtle zoom effect */
 }
 
 
 .about__content {
-    flex: 1;
-    max-width: 50%;
-    text-align: justify;
+  flex: 1.2; /* Make the text container slightly larger */
+  max-width: 60%;
+  text-align: justify;
 }
 
 .about__content h1 {
-    margin-bottom: 40px; /* Adds space below the 'About Me' heading */
-  }
-  
-  .about__content p {
-    margin-bottom: 50px; /* Adds space below the 'About Me' paragraph */
-    line-height: 1.6; /* Keeps the text easily readable */
-  }
-  
-  .about__content h2 {
-    margin-top: 60px; /* Adds more space above 'My Work' */
-    margin-bottom: 30px; /* Space below the 'My Work' heading */
-  }
-  
-  .about__content ul {
-    list-style-type: none; /* Removes default list styling */
-    padding: 0; /* Removes default padding */
-  }
-  
-  .about__content li {
-    margin-bottom: 20px; /* Adds space between each list item */
-    line-height: 1.6; /* Adjusts line height for readability */
-  }
-  
-.about__content h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem; /* Reduces extra space */
+}
+
+.about__content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 3rem; /* More space before "My Work" */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--light-blue);
+  display: inline-block;
+}
+
+.about__content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 85%;
+  color: #ddd;
+}
+
+.about__content ul {
+  list-style: none;
+  padding: 0;
 }
 
 .about__content li {
-    font-size: 1.0rem;
-    line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+    color: #ddd; 
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Add a subtle bullet point */
+.about__content li::before {
+  content: "❊";
+  color: var(--light-blue);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.about__content li strong {
+  margin-bottom: 15px;
+  font-size: 1.rem;
+  color: var(--light-blue);
+  text-transform: uppercase;
+  line-height: 1.5;
+  position: relative;
 }
 
 
@@ -86,4 +116,21 @@ body {
 
 .about__content a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about {
+      flex-direction: column; /* Stack elements */
+      text-align: center;
+      padding: 3rem 5%;
+      gap: 3rem;
+  }
+
+  .about__content {
+      max-width: 100%;
+  }
+
+  .about__image {
+      max-width: 90%;
+  }
 }
